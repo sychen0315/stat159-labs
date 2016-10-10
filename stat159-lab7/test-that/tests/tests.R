@@ -36,7 +36,7 @@ test_that("missing value function works as expected", {
   x <- c(1, 2, 3, 4, 5, NA)
   expect_gte(missing_values(x), 0)
   expect_length(missing_values(x), 1)
-  expect_type(missing_values(x), 'double')
+  expect_type(missing_values(x), 'integer')
   
 })
 
