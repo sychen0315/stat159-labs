@@ -20,8 +20,9 @@ server <- function(input, output) {
   
   output$plot1 <- renderPlot({
     par(mar = c(5.1, 4.1, 0, 1))
-    plot(selectedData(),
-         pch = 20, cex = 3)
+    plot(selectedData())
+    reg <- lm(Sales ~ ., data = selectedData())
+    abline(reg, col = "red")
   })
   
 }
